@@ -1,3 +1,9 @@
+//font montessarat
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+body
+{
+    font-family: 'Montserrat', sans-serif;
+}
 li
 {
     list-style-type: none;
@@ -17,7 +23,7 @@ li
 {
     position: absolute;
     top: 15px;
-    left: 20%;
+    left: 10%;
     width: auto;
     height: 18px;
 }
@@ -25,7 +31,7 @@ li
 {
     position: absolute;
     top: 9px;
-    left: 24%;
+    left: 14%;
     width: auto;
     height: 30px;
 }
@@ -33,11 +39,12 @@ li
 {
     position: relative;
     top: 0px;
-    left: 33%;
+    left: 22%;
     width: 440px;
     height: 26px;
     text-align: center;
     letter-spacing: 0px;
+    font-size: 14px;
     color: #000000;
     opacity: 1;
 }
@@ -47,23 +54,80 @@ li
     text-decoration: underline;
     letter-spacing: 0px;
     color: #000000;
-    font-weight: bold;
+    font-weight: 900;
 }
 .right-arrow
 {
     position: absolute;
-    top: 5px;
-    left: 95%;
-    width: 8px;
+    top: 4px;
+    left: 99%;
+    width: auto;
     height: 12px;
 }
 .left-arrow
 {
     position: absolute;
-    top: 5px;
-    left: 3%;
-    width: 8px;
+    top: 4px;
+    left: 0%;
+    width: auto;
     height: 12px;
+}
+.contactUs
+{
+    position: absolute;
+    top: 15px;
+    left: 62%;
+    width: auto;
+    height: 25px;
+}
+.contactUs span
+{
+    position: relative;
+    text-align: left;
+    letter-spacing: 0px;
+    color: #000000;
+    font-weight: 900;
+    opacity: 1;
+    margin-left: 10px;
+    top: -2px;
+}
+.track
+{
+    position: absolute;
+    top: 15px;
+    left: 73%;
+    width: auto;
+    height: 25px;
+}
+.track span
+{
+    position: relative;
+    text-align: left;
+    letter-spacing: 0px;
+    color: #000000;
+    font-weight: 900;
+    opacity: 1;
+    margin-left: 10px;
+    top: -2px;
+}
+.location
+{
+    position: absolute;
+    top: 15px;
+    left: 84%;
+    width: auto;
+    height: 25px;
+}
+.location span
+{
+    position: relative;
+    text-align: left;
+    letter-spacing: 0px;
+    color: #000000;
+    font-weight: 900;
+    opacity: 1;
+    margin-left: 10px;
+    top: -2px;
 }
 @media only screen and (max-width: 395px) {
     .sidebarBtn
@@ -77,6 +141,10 @@ li
     .navText
     {
         display: none;
+    }
+    .menu
+    {
+        display:none;
     }
 }
 @media (min-width: 396px) and (max-width: 552px) {
@@ -92,6 +160,10 @@ li
     {
         display: none;
     }
+    .menu
+    {
+        display:none;
+    }
 }
 @media (min-width: 553px) and (max-width: 767px) {
     .sidebarBtn
@@ -106,10 +178,18 @@ li
     {
         display: none;
     }
+    .menu
+    {
+        display:none;
+    }
 }
 @media (min-width: 768px) and (max-width: 1268px) {
     .navText
     {
         display: none;
+    }
+    .menu
+    {
+        display:none;
     }
 }
