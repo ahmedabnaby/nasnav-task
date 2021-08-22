@@ -1,0 +1,115 @@
+li
+{
+    list-style-type: none;
+}
+.upperNav
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 48px;
+    background: #FFF100 0% 0% no-repeat padding-box;
+    box-shadow: 0px 0.73px 2px #00000080;
+    opacity: 1;
+}
+.sidebarBtn
+{
+    position: absolute;
+    top: 15px;
+    left: 20%;
+    width: auto;
+    height: 18px;
+}
+.logo
+{
+    position: absolute;
+    top: 9px;
+    left: 24%;
+    width: auto;
+    height: 30px;
+}
+.navText
+{
+    position: relative;
+    top: 0px;
+    left: 33%;
+    width: 440px;
+    height: 26px;
+    text-align: center;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+}
+.shopNow
+{
+    text-align: center;
+    text-decoration: underline;
+    letter-spacing: 0px;
+    color: #000000;
+    font-weight: bold;
+}
+.right-arrow
+{
+    position: absolute;
+    top: 5px;
+    left: 95%;
+    width: 8px;
+    height: 12px;
+}
+.left-arrow
+{
+    position: absolute;
+    top: 5px;
+    left: 3%;
+    width: 8px;
+    height: 12px;
+}
+@media only screen and (max-width: 395px) {
+    .sidebarBtn
+    {
+        left: 15%;
+    }
+    .logo
+    {
+        left: 35%;
+    }
+    .navText
+    {
+        display: none;
+    }
+}
+@media (min-width: 396px) and (max-width: 552px) {
+    .sidebarBtn
+    {
+        left: 15%;
+    }
+    .logo
+    {
+        left: 38%;
+    }
+    .navText
+    {
+        display: none;
+    }
+}
+@media (min-width: 553px) and (max-width: 767px) {
+    .sidebarBtn
+    {
+        left: 10%;
+    }
+    .logo
+    {
+        left: 42%;
+    }
+    .navText
+    {
+        display: none;
+    }
+}
+@media (min-width: 768px) and (max-width: 1268px) {
+    .navText
+    {
+        display: none;
+    }
+}
