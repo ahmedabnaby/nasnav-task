@@ -571,7 +571,7 @@ li
 .add_to_cart
 {
     position: relative;
-    left: 10px;
+    left: 15px;
     margin-top: 15px;
     width: 252px;
     height: 54px;
@@ -610,6 +610,167 @@ li
     color: #000;
     font-weight: bolder;
     opacity: 1;
+}
+.section-title
+{
+    text-transform: none !important;
+    font-family: "Montserrat";
+    font-weight: bolder;
+    text-align: left;
+    letter-spacing: 0px;
+    color: $secondary-color;
+    opacity: 1;
+    border-bottom:none !important;
+    font-size: 28px !important;
+}
+.section-title h3
+{
+    text-align: left;
+    letter-spacing: 0px;
+    color: #575756 !important;
+    opacity: 1;
+    font-size: 22px !important;
+}
+.product_card
+{
+    width: 100%;
+    height: 440px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 0.7551665306091309px solid #ECECEC;
+    border-radius: 5px;
+    opacity: 1;
+}
+.product_new_title
+{
+    width: 100%;
+    height: 42px;
+    text-align: left;
+    letter-spacing: 0px;
+    color: #1D1D1B;
+    opacity: 1;
+    padding: 10px;
+}
+.product_new_title h1
+{
+    font-size: 14px;
+    font-weight: 900;
+}
+.product_new_title h2
+{
+    color: $secondary-color !important;
+    font-size: 20px;
+    font-weight: 900;
+    border-bottom: none;
+}
+.product_new_title h3
+{
+    position: relative;
+    top: -25px;
+    color: $secondary-color !important;
+    font-size: 14px;
+    font-weight: 700;
+    border-bottom: none;
+}
+.yellowSale2
+{
+    position: relative;
+    top: 35px;
+    left: 100px;
+    width: 52px;
+    height: 18px;
+    background: $primary-color 0% 0% no-repeat padding-box;
+    border-radius: 3px;
+    opacity: 1;
+}
+.yellowSale2 span
+{
+    position: relative;
+    top: 2px;
+    font-size: 10px;
+    left: 8px;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+}
+.adidasSimilar
+{
+    position: relative;
+    left: 75px;
+    top: -5px;
+}
+.ratings-container
+{
+    position: relative;
+    top: 10px;
+    left: 50px;
+}
+.ratings-container .ratings:before
+{
+    color: #FFB900;
+}
+.oneand3
+{
+    position: relative;
+    top: 15px;
+    left: -75px;
+    font-size: 10px;
+    font-weight: 900;
+    text-align: right;
+    letter-spacing: 0px;
+    color: #1D1D1B;
+    opacity: 1;
+}
+.oneand3 h1
+{
+    font-size: 10px;
+    font-weight: 900;
+}
+.twoand4
+{
+    position: relative;
+    top: 15px;
+    left: -75px;
+    font-size: 10px;
+    font-weight: 900;
+    text-align: right;
+    letter-spacing: 0px;
+    color: #1D1D1B;
+    opacity: 1;
+}
+.twoand4 h1
+{
+    font-size: 10px;
+    font-weight: 900;
+}
+.short-divider
+{
+    border-color: transparent !important;
+}
+.footer
+{
+    position: relative;
+    top: 325px;
+    width: 100%;
+    height: 495px;
+    background: #3C3C3B 0% 0% no-repeat padding-box;
+}
+.footer-text
+{
+    position: absolute;
+    left: 22%;
+    top: 55px;
+    width: 15%;
+    text-align: left;
+    letter-spacing: -0.4px;
+    color: #FFFFFF;
+    opacity: 1;
+    font-size: 13   px;
+}
+.footer-text p
+{
+    margin-top: 25px !important;
 }
 @media only screen and (max-width: 395px) {
     .sidebarBtn
@@ -745,6 +906,102 @@ li
         padding-top: 55px;
         top: -55px;
     }
+    .product_new_title
+    {
+        width: 100%;
+        height: 42px;
+        padding: 10px;
+    }
+    .product_new_title h1
+    {
+        font-size: 14px;
+        font-weight: 900;
+    }
+    .product_new_title h2
+    {
+        font-size: 20px;
+        font-weight: 900;
+    }
+    .product_new_title h3
+    {
+        position: relative;
+        top: -25px;
+        font-size: 14px;
+    }
+    .yellowSale2
+    {
+        position: relative;
+        top: 35px;
+        left: 90px;
+        width: 52px;
+        height: 18px;
+    }
+    .adidasSimilar
+    {
+        position: relative;
+        left: 0;
+        top: 85px;
+    }
+    .ratings-container
+    {
+        position: relative;
+        top: 110px;
+        left: 2%;
+    }
+    .ratings-container .ratings:before
+    {
+        color: #FFB900;
+    }
+    .oneand3
+    {
+        position: relative;
+        top: 130px;
+        left: 0;
+        font-size: 10px;
+        text-align: center;
+    }
+    .oneand3 h1
+    {
+        font-size: 10px;
+        font-weight: 900;
+    }
+    .twoand4
+    {
+        position: relative;
+        top: 130px;
+        left: 0;
+        font-size: 10px;
+        text-align: center;
+    }
+    .twoand4 h1
+    {
+        font-size: 10px;
+        font-weight: 900;
+    }
+    .footer
+    {
+        position: relative;
+        width: 100%;
+        top: 455px;
+        height: 630px;
+        background: #3C3C3B 0% 0% no-repeat padding-box;
+    }
+    .footer-text
+    {
+        position: absolute;
+        left:15%;
+        top: 55px;
+        width: 75% !important;
+        text-align: left;
+        letter-spacing: -0.4px;
+        color: #FFFFFF;
+        opacity: 1;
+        font-size: 13px;
+    }
+    .footer-text p
+    {
+        margin-top: 0 !important;
+    }
 }
 @media (min-width: 396px) and (max-width: 552px) {
     .sidebarBtn
@@ -866,6 +1123,111 @@ li
     {
         top: -15px;
     }
+    .product_card
+    {
+        width: 100%;
+        height: 490px;
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        border: 0.7551665306091309px solid #ECECEC;
+        border-radius: 5px;
+        opacity: 1;
+    }
+    .product_new_title
+    {
+        width: 100%;
+        height: 42px;
+        padding: 10px;
+    }
+    .product_new_title h1
+    {
+        font-size: 14px;
+        font-weight: 900;
+    }
+    .product_new_title h2
+    {
+        font-size: 20px;
+        font-weight: 900;
+    }
+    .product_new_title h3
+    {
+        position: relative;
+        top: -25px;
+        font-size: 14px;
+    }
+    .yellowSale2
+    {
+        position: relative;
+        top: 35px;
+        left: 90px;
+        width: 52px;
+        height: 18px;
+    }
+    .adidasSimilar
+    {
+        position: relative;
+        left: 0;
+        top: 85px;
+    }
+    .ratings-container
+    {
+        position: relative;
+        top: 110px;
+        left: 16%;
+    }
+    .ratings-container .ratings:before
+    {
+        color: #FFB900;
+    }
+    .oneand3
+    {
+        position: relative;
+        top: 115px;
+        left: 0;
+        font-size: 10px;
+        text-align: center;
+    }
+    .oneand3 h1
+    {
+        font-size: 10px;
+        font-weight: 900;
+    }
+    .twoand4
+    {
+        position: relative;
+        top: 115px;
+        left: 0;
+        font-size: 10px;
+        text-align: center;
+    }
+    .twoand4 h1
+    {
+        font-size: 10px;
+        font-weight: 900;
+    }
+    .footer
+    {
+        position: relative;
+        width: 100%;
+        top: 455px;
+        height: 630px;
+        background: #3C3C3B 0% 0% no-repeat padding-box;
+    }
+    .footer-text
+    {
+        position: absolute;
+        left:15%;
+        top: 55px;
+        width: 75% !important;
+        text-align: left;
+        letter-spacing: -0.4px;
+        color: #FFFFFF;
+        opacity: 1;
+        font-size: 13px;
+    }
+    .footer-text p
+    {
+        margin-top: 0 !important;
+    }
 }
 @media (min-width: 553px) and (max-width: 767px) {
     .sidebarBtn
@@ -971,6 +1333,106 @@ li
         position: relative;
         top: 455px;
     }
+    .product_card
+    {
+        height: 510px;
+    }
+    .product_new_title
+    {
+        width: 100%;
+        height: 42px;
+        padding: 10px;
+    }
+    .product_new_title h1
+    {
+        font-size: 14px;
+        font-weight: 900;
+    }
+    .product_new_title h2
+    {
+        font-size: 20px;
+        font-weight: 900;
+    }
+    .product_new_title h3
+    {
+        position: relative;
+        top: -25px;
+        font-size: 14px;
+    }
+    .yellowSale2
+    {
+        position: relative;
+        top: 35px;
+        left: 90px;
+        width: 52px;
+        height: 18px;
+    }
+    .adidasSimilar
+    {
+        position: relative;
+        left: 0;
+        top: 85px;
+    }
+    .ratings-container
+    {
+        position: relative;
+        top: 110px;
+        left: 4%;
+    }
+    .ratings-container .ratings:before
+    {
+        color: #FFB900;
+    }
+    .oneand3
+    {
+        position: relative;
+        top: 115px;
+        left: 0;
+        font-size: 10px;
+        text-align: center;
+    }
+    .oneand3 h1
+    {
+        font-size: 10px;
+        font-weight: 900;
+    }
+    .twoand4
+    {
+        position: relative;
+        top: 115px;
+        left: 0;
+        font-size: 10px;
+        text-align: center;
+    }
+    .twoand4 h1
+    {
+        font-size: 10px;
+        font-weight: 900;
+    }
+    .footer
+    {
+        position: relative;
+        width: 100%;
+        top: 455px;
+        height: 630px;
+        background: #3C3C3B 0% 0% no-repeat padding-box;
+    }
+    .footer-text
+    {
+        position: absolute;
+        left:15%;
+        top: 55px;
+        width: 75% !important;
+        text-align: left;
+        letter-spacing: -0.4px;
+        color: #FFFFFF;
+        opacity: 1;
+        font-size: 13px;
+    }
+    .footer-text p
+    {
+        margin-top: 0 !important;
+    }
 }
 @media (min-width: 768px) and (max-width: 1268px) {
     .navText
@@ -1008,5 +1470,74 @@ li
     .config-size-list
     {
         top: 15px;
+    }
+    .footer
+    {
+        position: relative;
+        width: 100%;
+        top: 355px;
+        height: 630px;
+        background: #3C3C3B 0% 0% no-repeat padding-box;
+    }
+    .footer-text
+    {
+        position: absolute;
+        left:35%;
+        top: 55px;
+        width: 36% !important;
+        text-align: left;
+        letter-spacing: -0.4px;
+        color: #FFFFFF;
+        opacity: 1;
+        font-size: 13px;
+    }
+    .footer-text p
+    {
+        margin-top: 0 !important;
+    }
+}
+@media (min-width: 1269px) and (max-width: 1365px) {
+    .footer-text
+    {
+        left: 8%;
+        top: 55px;
+        width: 35%;
+        font-size: 12px;
+    }
+}
+@media (min-width: 1366px) and (max-width: 1439px) {
+    .footer-text
+    {
+        left: 10%;
+        top: 55px;
+        width: 33%;
+        font-size: 12px;
+    }
+}
+@media (min-width: 1440px) and (max-width: 1679px) {
+    .footer-text
+    {
+        left: 13%;
+        top: 55px;
+        width: 31%;
+        font-size: 12px;
+    }
+}
+@media (min-width: 1680px) and (max-width: 1919px) {
+    .footer-text
+    {
+        left: 18%;
+        top: 55px;
+        width: 26%;
+        font-size: 12px;
+    }
+}
+@media (min-width: 1940px) and (max-width: 2560px) {
+    .footer-text
+    {
+        left: 29%;
+        top: 55px;
+        width: 17%;
+        font-size: 12px;
     }
 }

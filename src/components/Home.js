@@ -150,28 +150,24 @@ class Home extends Component {
                   <img
                     className="product-single-image"
                     src={this.props.products.image1x2}
-                    data-zoom-image={this.props.products.image1x2}
                   />
                 </div>
                 <div className="product-item">
                   <img
                     className="product-single-image"
                     src={this.props.products.image2x2}
-                    data-zoom-image={this.props.products.image2x2}
                   />
                 </div>
                 <div className="product-item">
                   <img
                     className="product-single-image"
                     src={this.props.products.image3x2}
-                    data-zoom-image={this.props.products.image3x2}
                   />
                 </div>
                 <div className="product-item">
                   <img
                     className="product-single-image"
                     src={this.props.products.image4x2}
-                    data-zoom-image={this.props.products.image4x2}
                   />
                 </div>
               </div>
@@ -287,373 +283,83 @@ class Home extends Component {
       {/* End .product-single-container */}
 
       <div className="products-section">
-        <h2 className="section-title">Related Products</h2>
+        <h2 className="section-title">Similar Products</h2>
+        <h3>You may like these products also</h3>
         <div className="products-slider owl-carousel owl-theme dots-top">
-          <div className="product-default inner-quickview inner-icon">
-            <figure>
-              <a href="product.html">
-                <img src="images/products/product-14.jpg" />
-              </a>
-              <div className="label-group">
-                <span className="product-label label-sale">-20%</span>
-              </div>
-              <div className="btn-icon-group">
-                <button
-                  className="btn-icon btn-add-cart"
-                  data-toggle="modal"
-                  data-target="#addCartModal"
-                >
-                  <i className="icon-shopping-cart" />
-                </button>
-              </div>
-              <a
-                href="ajax/product-quick-view.html"
-                className="btn-quickview"
-                title="Quick View"
-              >
-                Quick View
-              </a>
-            </figure>
-            <div className="product-details">
-              <div className="category-wrap">
-                <div className="category-list">
-                  <a href="category.html" className="product-category">
-                    category
-                  </a>
+            {this.props.similar_products.map((product, i) => {
+                return(
+                <div className="row" key={product.id}>
+                    <div className="col">
+                        <div className="product_card">
+                            <img src={product.image} style={{padding:"5px"}} role="..."/>
+                            <div className="product_new_title">
+                                <h1>{product.name}</h1>
+                                <h2>{product.price}</h2>
+                                <h3>{product.price}</h3>
+                            </div>
+                            {product.sale!==""?
+                            <div>
+                            <div className="yellowSale2">
+                            {<span>{product.sale} Off</span>}
+                            </div>
+                            <div className="adidasSimilar">
+                                <img src="images/adidas.svg" className="adidasLogoProducts" role="..."/>
+                            </div>
+                            <div className="ratings-container">
+                                <div className="product-ratings">
+                                    <span className="ratings" style={{ width: "60%" }} />
+                                    {/* End .ratings */}
+                                </div>
+                                {/* End .product-ratings */}
+                                <a href="#" className="rating-link">
+                                    4.9 of 5
+                                </a>
+                                </div>
+                                {i===0 || i===2?
+                                <div className="oneand3"> 
+                                    <h1>Pickup From: <span style={{fontWeight:'bolder'}}>{product.location}</span></h1>
+                                </div>
+                                :
+                                <div> 
+                           <    div className="twoand4"> 
+                                    <h1>From: <span style={{fontWeight:'bolder'}}>{product.from}</span> to: <span style={{fontWeight:'bolder'}}>{product.to}</span> In: <span style={{fontWeight:'bolder'}}>{product.in}</span> Days</h1>
+                                </div>                            
+                                </div>
+                            }
+                            </div>
+                            : 
+                            <div style={{position:'relative', top:'15px'}}>                          
+                                <div className="adidasSimilar">
+                                <img src="images/adidas.svg" className="adidasLogoProducts" role="..."/>
+                                </div>
+                                <div className="ratings-container">
+                                <div className="product-ratings">
+                                    <span className="ratings" style={{ width: "60%" }} />
+                                    {/* End .ratings */}
+                                </div>
+                                {/* End .product-ratings */}
+                                <a href="#" className="rating-link">
+                                    4.9 of 5
+                                </a>
+                                </div>
+                                {i===0 || i===2?
+                                <div className="oneand3"> 
+                                    <h1>Pickup From: <span style={{fontWeight:'bolder'}}>{product.location}</span></h1>
+                                </div>
+                                :
+                                <div> 
+                           <    div className="twoand4"> 
+                                    <h1>From: <span style={{fontWeight:'bolder'}}>{product.from}</span> to: <span style={{fontWeight:'bolder'}}>{product.to}</span> In: <span style={{fontWeight:'bolder'}}>{product.in}</span> Days</h1>
+                                </div>                            
+                                </div>
+                            }
+                            </div>
+                        }
+                        </div>
+                    </div>
                 </div>
-              </div>
-              <h3 className="product-title">
-                <a href="product.html">Product Short Name</a>
-              </h3>
-              <div className="ratings-container">
-                <div className="product-ratings">
-                  <span className="ratings" style={{ width: "100%" }} />
-                  {/* End .ratings */}
-                  <span className="tooltiptext tooltip-top" />
-                </div>
-                {/* End .product-ratings */}
-              </div>
-              {/* End .ratings-container */}
-              <div className="price-box">
-                <span className="old-price">$59.00</span>
-                <span className="product-price">$49.00</span>
-              </div>
-              {/* End .price-box */}
-            </div>
-            {/* End .product-details */}
-          </div>
-          <div className="product-default inner-quickview inner-icon">
-            <figure>
-              <a href="product.html">
-                <img src="images/products/product-13.jpg" />
-              </a>
-              <div className="btn-icon-group">
-                <button
-                  className="btn-icon btn-add-cart"
-                  data-toggle="modal"
-                  data-target="#addCartModal"
-                >
-                  <i className="icon-shopping-cart" />
-                </button>
-              </div>
-              <a
-                href="ajax/product-quick-view.html"
-                className="btn-quickview"
-                title="Quick View"
-              >
-                Quick View
-              </a>
-            </figure>
-            <div className="product-details">
-              <div className="category-wrap">
-                <div className="category-list">
-                  <a href="category.html" className="product-category">
-                    category
-                  </a>
-                </div>
-              </div>
-              <h3 className="product-title">
-                <a href="product.html">Product Short Name</a>
-              </h3>
-              <div className="ratings-container">
-                <div className="product-ratings">
-                  <span className="ratings" style={{ width: "100%" }} />
-                  {/* End .ratings */}
-                  <span className="tooltiptext tooltip-top" />
-                </div>
-                {/* End .product-ratings */}
-              </div>
-              {/* End .ratings-container */}
-              <div className="price-box">
-                <span className="old-price">$59.00</span>
-                <span className="product-price">$49.00</span>
-              </div>
-              {/* End .price-box */}
-            </div>
-            {/* End .product-details */}
-          </div>
-          <div className="product-default inner-quickview inner-icon">
-            <figure>
-              <a href="product.html">
-                <img src="images/products/product-12.jpg" />
-              </a>
-              <div className="btn-icon-group">
-                <button
-                  className="btn-icon btn-add-cart"
-                  data-toggle="modal"
-                  data-target="#addCartModal"
-                >
-                  <i className="icon-shopping-cart" />
-                </button>
-              </div>
-              <a
-                href="ajax/product-quick-view.html"
-                className="btn-quickview"
-                title="Quick View"
-              >
-                Quick View
-              </a>
-            </figure>
-            <div className="product-details">
-              <div className="category-wrap">
-                <div className="category-list">
-                  <a href="category.html" className="product-category">
-                    category
-                  </a>
-                </div>
-              </div>
-              <h3 className="product-title">
-                <a href="product.html">Product Short Name</a>
-              </h3>
-              <div className="ratings-container">
-                <div className="product-ratings">
-                  <span className="ratings" style={{ width: "100%" }} />
-                  {/* End .ratings */}
-                  <span className="tooltiptext tooltip-top" />
-                </div>
-                {/* End .product-ratings */}
-              </div>
-              {/* End .ratings-container */}
-              <div className="price-box">
-                <span className="old-price">$59.00</span>
-                <span className="product-price">$49.00</span>
-              </div>
-              {/* End .price-box */}
-            </div>
-            {/* End .product-details */}
-          </div>
-          <div className="product-default inner-quickview inner-icon">
-            <figure>
-              <a href="product.html">
-                <img src="images/products/product-11.jpg" />
-              </a>
-              <div className="label-group">
-                <span className="product-label label-hot">HOT</span>
-              </div>
-              <div className="btn-icon-group">
-                <button
-                  className="btn-icon btn-add-cart"
-                  data-toggle="modal"
-                  data-target="#addCartModal"
-                >
-                  <i className="icon-shopping-cart" />
-                </button>
-              </div>
-              <a
-                href="ajax/product-quick-view.html"
-                className="btn-quickview"
-                title="Quick View"
-              >
-                Quick View
-              </a>
-            </figure>
-            <div className="product-details">
-              <div className="category-wrap">
-                <div className="category-list">
-                  <a href="category.html" className="product-category">
-                    category
-                  </a>
-                </div>
-              </div>
-              <h3 className="product-title">
-                <a href="product.html">Product Short Name</a>
-              </h3>
-              <div className="ratings-container">
-                <div className="product-ratings">
-                  <span className="ratings" style={{ width: "100%" }} />
-                  {/* End .ratings */}
-                  <span className="tooltiptext tooltip-top" />
-                </div>
-                {/* End .product-ratings */}
-              </div>
-              {/* End .ratings-container */}
-              <div className="price-box">
-                <span className="old-price">$59.00</span>
-                <span className="product-price">$49.00</span>
-              </div>
-              {/* End .price-box */}
-            </div>
-            {/* End .product-details */}
-          </div>
-          <div className="product-default inner-quickview inner-icon">
-            <figure>
-              <a href="product.html">
-                <img src="images/products/product-10.jpg" />
-              </a>
-              <div className="label-group">
-                <span className="product-label label-hot">HOT</span>
-              </div>
-              <div className="btn-icon-group">
-                <button
-                  className="btn-icon btn-add-cart"
-                  data-toggle="modal"
-                  data-target="#addCartModal"
-                >
-                  <i className="icon-shopping-cart" />
-                </button>
-              </div>
-              <a
-                href="ajax/product-quick-view.html"
-                className="btn-quickview"
-                title="Quick View"
-              >
-                Quick View
-              </a>
-            </figure>
-            <div className="product-details">
-              <div className="category-wrap">
-                <div className="category-list">
-                  <a href="category.html" className="product-category">
-                    category
-                  </a>
-                </div>
-              </div>
-              <h3 className="product-title">
-                <a href="product.html">Product Short Name</a>
-              </h3>
-              <div className="ratings-container">
-                <div className="product-ratings">
-                  <span className="ratings" style={{ width: "100%" }} />
-                  {/* End .ratings */}
-                  <span className="tooltiptext tooltip-top" />
-                </div>
-                {/* End .product-ratings */}
-              </div>
-              {/* End .ratings-container */}
-              <div className="price-box">
-                <span className="old-price">$59.00</span>
-                <span className="product-price">$49.00</span>
-              </div>
-              {/* End .price-box */}
-            </div>
-            {/* End .product-details */}
-          </div>
-          <div className="product-default inner-quickview inner-icon">
-            <figure>
-              <a href="product.html">
-                <img src="images/products/product-9.jpg" />
-              </a>
-              <div className="label-group">
-                <span className="product-label label-sale">-30%</span>
-              </div>
-              <div className="btn-icon-group">
-                <button
-                  className="btn-icon btn-add-cart"
-                  data-toggle="modal"
-                  data-target="#addCartModal"
-                >
-                  <i className="icon-shopping-cart" />
-                </button>
-              </div>
-              <a
-                href="ajax/product-quick-view.html"
-                className="btn-quickview"
-                title="Quick View"
-              >
-                Quick View
-              </a>
-            </figure>
-            <div className="product-details">
-              <div className="category-wrap">
-                <div className="category-list">
-                  <a href="category.html" className="product-category">
-                    category
-                  </a>
-                </div>
-              </div>
-              <h3 className="product-title">
-                <a href="product.html">Product Short Name</a>
-              </h3>
-              <div className="ratings-container">
-                <div className="product-ratings">
-                  <span className="ratings" style={{ width: "100%" }} />
-                  {/* End .ratings */}
-                  <span className="tooltiptext tooltip-top" />
-                </div>
-                {/* End .product-ratings */}
-              </div>
-              {/* End .ratings-container */}
-              <div className="price-box">
-                <span className="old-price">$59.00</span>
-                <span className="product-price">$49.00</span>
-              </div>
-              {/* End .price-box */}
-            </div>
-            {/* End .product-details */}
-          </div>
-          <div className="product-default inner-quickview inner-icon">
-            <figure>
-              <a href="product.html">
-                <img src="images/products/product-8.jpg" />
-              </a>
-              <div className="label-group">
-                <span className="product-label label-sale">-20%</span>
-              </div>
-              <div className="btn-icon-group">
-                <button
-                  className="btn-icon btn-add-cart"
-                  data-toggle="modal"
-                  data-target="#addCartModal"
-                >
-                  <i className="icon-shopping-cart" />
-                </button>
-              </div>
-              <a
-                href="ajax/product-quick-view.html"
-                className="btn-quickview"
-                title="Quick View"
-              >
-                Quick View
-              </a>
-            </figure>
-            <div className="product-details">
-              <div className="category-wrap">
-                <div className="category-list">
-                  <a href="category.html" className="product-category">
-                    category
-                  </a>
-                </div>
-              </div>
-              <h3 className="product-title">
-                <a href="product.html">Product Short Name</a>
-              </h3>
-              <div className="ratings-container">
-                <div className="product-ratings">
-                  <span className="ratings" style={{ width: "100%" }} />
-                  {/* End .ratings */}
-                  <span className="tooltiptext tooltip-top" />
-                </div>
-                {/* End .product-ratings */}
-              </div>
-              {/* End .ratings-container */}
-              <div className="price-box">
-                <span className="old-price">$59.00</span>
-                <span className="product-price">$49.00</span>
-              </div>
-              {/* End .price-box */}
-            </div>
-            {/* End .product-details */}
-          </div>
+          );
+        })}
         </div>
         {/* End .products-slider */}
       </div>
