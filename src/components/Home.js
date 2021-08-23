@@ -3,18 +3,7 @@ import React, { Component } from 'react';
 import Sidebar from "react-sidebar";
 import ImageComponent from "./ImageComponent";
 import Navbar from "./Navbar";
-import adidas from "../images/adidas1.png"
-import adidas1 from "../images/adidas1x2.png"
-import adidas2 from "../images/adidas2.png"
-import adidas2x2 from "../images/adidas2x2.png"
-import adidas3 from "../images/adidas3.png"
-import adidas3x2 from "../images/adidas3x2.png"
-import adidas4 from "../images/adidas4.png"
-import adidas4x2 from "../images/adidas4x2.png"
-import adidas5 from "../images/adidas5.png"
-import adidas5x2 from "../images/adidas5x2.png"
-import adidas6 from "../images/adidas6.png"
-import adidas6x2 from "../images/adidas6x2.png"
+
 
 import similar1x2 from "../images/similar1x2.png"
 import similar2x2 from "../images/similar2x2.png"
@@ -28,32 +17,11 @@ class Home extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            sidebarOpen: false
-          };
-          this.onSetSidebarOpen = this.onSetSidebarOpen.bind(this);
-    }
-    onSetSidebarOpen(open) {
-        this.setState({ sidebarOpen: open });
-      }
-    render() { 
-      const products = {
-        id:'1',
-        name: "Adidas black t-shirt lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
-        category: "Men",
-        price: "9,999 LE",
-        image1: adidas,
-        image1x2: adidas1,
-        image2: adidas2,
-        image2x2: adidas2x2,  
-        image3: adidas3,
-        image3x2: adidas3x2,
-        image4: adidas4,
-        image4x2: adidas4x2,
-        image5: adidas5,
-        image5x2: adidas5x2,
-        image6: adidas6,
-        image6x2: adidas6x2,
-      }
+          count: 0
+        };
+  }
+  render() { 
+      let count = this.state.count;
       const similar_products = [
         {id:'1',name: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.', price: '49.99 LE',sale:'50%',location:'Genena Mall', from:'',to:'',in:'', image:similar1x2},
         {id:'2',name: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.', price: '9.99 LE',sale:'' ,location:'Genena Mall', from:'UK',to:'Egypt',in:'10',image:similar2x2},
@@ -79,6 +47,9 @@ class Home extends Component {
                      <div>
                      <ul className="menu-row2">
                         <a href="#">
+                        <div className="counter">
+                                <span>{count}</span>
+                              </div>
                             <li className="cart">
                             <img src={process.env.PUBLIC_URL + 'images/cart.svg'} role="..."/>
                             <span>Cart</span>
@@ -123,8 +94,145 @@ class Home extends Component {
     <div className="container">
 
       {/* End .product-single-container */}
-          <Product products={products}/>
-          <SimilarProducts similar_products={similar_products}/>
+      <div className="product-single-container product-single-default">
+      <div className="row">
+        <div className="col-md-5 product-single-gallery">
+          <div className="product-slider-container">
+            <div className="product-single-carousel owl-carousel owl-theme">
+              <div className="product-item">
+                <img
+                  className="product-single-image"
+                  src={this.props.products.image1x2}
+                />
+              </div>
+              <div className="product-item">
+                <img
+                  className="product-single-image"
+                  src={this.props.products.image2x2}
+                />
+              </div>
+              <div className="product-item">
+                <img
+                  className="product-single-image"
+                  src={this.props.products.image3x2}
+                />
+              </div>
+              <div className="product-item">
+                <img
+                  className="product-single-image"
+                  src={this.props.products.image4x2}
+                />
+              </div>
+            </div>
+            {/* End .product-single-carousel */}
+            <span className="prod-full-screen">
+              <i className="icon-plus" />
+            </span>
+          </div>
+          <div className="prod-thumbnail owl-dots" id="carousel-custom-dots">
+            <div className="owl-dot">
+            <ImageComponent url={this.props.products.image1}/>
+            </div>
+            <div className="owl-dot">
+              <img src={this.props.products.image2} />
+            </div>
+            <div className="owl-dot">
+              <img src={this.props.products.image3}  />
+            </div>
+            <div className="owl-dot">
+              <img src={this.props.products.image4} />
+            </div>
+          </div>
+        </div>
+        {/* End .product-single-gallery */}
+        <div className="col-md-7 product-single-details">
+        <img src="images/adidas.svg" role="..." className="adidasLogoProducts"/>
+          <h1 className="product-title">{this.props.products.name}</h1>
+          <p>{this.props.products.category}</p>
+          <div className="ratings-container">
+            <div className="product-ratings">
+              <span className="ratings" style={{ width: "60%" }} />
+              {/* End .ratings */}
+            </div>
+            {/* End .product-ratings */}
+            <a href="#" className="rating-link">
+              4.9 of 5
+            </a>
+          </div>
+          {/* End .ratings-container */}
+          <hr className="short-divider" />
+          <div className="price-box">
+            <span className="product-price">{this.props.products.price}</span>
+            <span>9,999 LE</span>
+            <div className="yellowSale">
+            <span>30% Off</span>
+            </div>
+          </div>
+          {/* End .price-box */}
+          <div className="product-filters-container">
+            <div className="product-single-filter mb-2">
+              <h1 className="product-title1">Size</h1>
+              <ul className="config-size-list">
+                <li>
+                  <a href="#"><span className="size-text">Small</span></a>
+                </li>
+                <li>
+                  <a href="#"><span className="size-text">Medium</span></a>
+                </li>
+                <li className="active">
+                  <a href="#"><span className="size-text">Large</span></a>
+                </li>
+                <li>
+                  <a href="#"><span className="size-text">X Large</span></a>
+                </li>
+                <li>
+                  <a href="#"><span className="size-text">XX Large</span></a>
+                </li>
+              </ul>
+            </div>
+            {/* End .product-single-filter */}
+          </div>
+          <div className="product-filters-container">
+            <div className="product-single-filter mb-2">
+              <h1 className="product-title1" style={{paddingTop:'55px'}}>Color</h1>
+              <ul className="config-size-list">
+                <li className="active">
+                  <img style={{cursor:'pointer'}} className="color-image" src={this.props.products.image5}/>
+                </li>
+                <li>
+                  <img style={{cursor:'pointer'}} className="color-image" src={this.props.products.image6}/>
+                </li>
+              </ul>
+            </div>
+            {/* End .product-single-filter */}
+          </div>
+          {/* End .product-filters-container */}
+          <div className="quantity">
+              <h1>Quantity</h1>
+              <div className="quantity_input">
+              <button type="button"  onClick={() => this.setState({ count: this.state.count - 1 })} className="button hollow circle" data-quantity="minus" data-field="quantity">
+                  <i className="fa fa-minus" aria-hidden="true"></i>
+              </button>
+              <input className="input-group-field" type="number" name="quantity" defaultValue="1"/>
+              <button type="button"  onClick={() => this.setState({ count: this.state.count + 1 })} className="button hollow circle" data-quantity="plus" data-field="quantity">
+              <i className="fa fa-plus" aria-hidden="true"></i>
+              </button>
+              </div>
+              <div className="row">
+              <div className="add_to_cart">
+                  <a href="#" onClick={() => this.setState({ count: this.state.count + 1 })}>Add To Cart</a>
+              </div>
+              <div className="pick_up">
+                  <a href="#">Pickup From Store</a>
+              </div>
+              </div>
+          </div>
+          {/* End .product-action */}
+        </div>
+        {/* End .product-single-details */}
+      </div>
+      {/* End .row */}
+    </div>          <SimilarProducts similar_products={similar_products}/>
       {/* End .products-section */}
     </div>
     {/* End .container */}

@@ -8,9 +8,12 @@ import { Container, Row,Col } from 'react-bootstrap';
 class Home extends Component {
     constructor(props) {
         super(props);
+        this.state = {
+            count: 0
+          };
     }
     render() { 
-
+    let count = this.state.count;
         return ( 
 
 
@@ -130,17 +133,17 @@ class Home extends Component {
           <div className="quantity">
               <h1>Quantity</h1>
               <div className="quantity_input">
-              <button type="button" className="button hollow circle" data-quantity="minus" data-field="quantity">
+              <button type="button"  onClick={() => this.setState({ count: this.state.count - 1 })} className="button hollow circle" data-quantity="minus" data-field="quantity">
                   <i className="fa fa-minus" aria-hidden="true"></i>
               </button>
               <input className="input-group-field" type="number" name="quantity" defaultValue="1"/>
-              <button type="button" className="button hollow circle" data-quantity="plus" data-field="quantity">
+              <button type="button"  onClick={() => this.setState({ count: this.state.count + 1 })} className="button hollow circle" data-quantity="plus" data-field="quantity">
               <i className="fa fa-plus" aria-hidden="true"></i>
               </button>
               </div>
               <div className="row">
               <div className="add_to_cart">
-                  <a href="#">Add To Cart</a>
+                  <a href="#" onClick={() => this.setState({ count: this.state.count + 1 })}>Add To Cart</a>
               </div>
               <div className="pick_up">
                   <a href="#">Pickup From Store</a>

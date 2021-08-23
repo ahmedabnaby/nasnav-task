@@ -932,6 +932,22 @@ a
     top: 26px;
     left: 85px;
 }
+.counter
+{
+    position: absolute;
+    left: 66%;
+    width: 15px;
+    height: 15px;
+    border-radius: 8px;
+    background-color: $primary-color;
+}
+.counter span
+{
+    position: relative;
+    left: 4px;
+    color: #000;
+    font-weight: 999;
+}
 @media only screen and (max-width: 395px) {
     .sidebarBtn
     {
