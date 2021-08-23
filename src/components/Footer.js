@@ -17,6 +17,46 @@ class Footer extends Component {
                             © 2021 yeshtery, all rights reserved.
                             </p>
                         </div>
+                        <div className="footer_right">
+                            <h1>Subscribe to our newsletter</h1>
+                            <div className="subscribe_input">
+                                <input type="text" className="subscribeField" placeholder="Enter Your Mail" />
+                                <div className="subscribeBtn">
+                                    <a href="#">Subscribe</a>
+                                    <img src="images/subscribe.svg" role="..." className="subscribeIcon" />
+                                </div>
+                            </div>
+                            <div className="row">
+                            <div className="footerMenu">
+                                <ul>
+                                    <a href="#"><li>About Us</li></a>
+                                    <a href="#"><li>Contact Us</li></a>
+                                    <a href="#"><li>Track Order</li></a>
+                                    <a href="#"><li>Terms & Conditions</li></a>
+                                    <a href="#"><li>Privacy Policy</li></a>
+                                    <a href="#"><li>Sell With Us</li></a>
+                                    <a href="#"><li>Shipping And Returns</li></a>
+                                </ul>
+                                    <div className="logos">
+                                        <img className="cash" src="images/cash.png" role="..." />
+                                        <img className="visa" src="images/visa.png" role="..." />
+                                        <img className="master" src="images/master.png" role="..." />
+                                    </div>
+                            </div>
+                            <div className="footerMenu1">
+                                <ul>
+                                    <a href="#"><li><img src="images/fb.svg" /><span>/YESHTERY</span></li></a>
+                                    <a href="#"><li><img src="images/ln.svg" /><span>/YESHTERY</span></li></a>
+                                    <a href="#"><li><img src="images/instagram.svg" /><span>/YESHTERY</span></li></a>
+                                    <a href="#"><li><img src="images/twitter.svg" /><span>/YESHTERY</span></li></a>
+                                </ul>
+                                <div className="poweredBy">
+                                    <h1>Powered By</h1>
+                                    <img src="images/nasnav.svg" className="nasnav" role="..." />
+                                </div>
+                            </div>
+                            </div>
+                        </div>
             </div>
          );
     }
