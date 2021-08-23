@@ -156,7 +156,7 @@ li
     position: relative;
     top: 30px;
     left: 11%;
-    z-index: 9999;
+    z-index: 8888;
 }
 .searchField
 {
@@ -247,6 +247,140 @@ li
     margin-left: 10px;
     top: -2px;
 }
+.second_row
+{
+    position: absolute;
+    top: 132px;
+    left: 0;
+    width: 100%;
+    height: 48px;
+    background: #000000 0% 0% no-repeat padding-box;
+    box-shadow: 0px 0.87px 2px #00000040;
+    opacity: 1;
+}
+.categories
+{
+    cursor: pointer;
+}
+.men
+{
+    position: absolute;
+    top: 15px;
+    left: 10%;
+    width: auto;
+    height: 29px;
+    color: #FFFFFF !important;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 0px;
+    opacity: 1;
+}
+.women
+{
+    position: absolute;
+    top: 15px;
+    left: 22%;
+    width: auto;
+    height: 29px;
+    color: #FFFFFF !important;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 0px;
+    opacity: 1;
+}
+.uni
+{
+    position: absolute;
+    top: 15px;
+    left: 34%;
+    width: auto;
+    height: 29px;
+    color: #FFFFFF !important;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 0px;
+    opacity: 1;
+}
+.kids
+{
+    position: absolute;
+    top: 15px;
+    left: 46%;
+    width: auto;
+    height: 29px;
+    color: #FFFFFF !important;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 0px;
+    opacity: 1;
+}
+.best
+{
+    position: absolute;
+    top: 15px;
+    left: 57%;
+    width: auto;
+    height: 29px;
+    color: #FFFFFF !important;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 0px;
+    opacity: 1;
+}
+.new
+{
+    position: absolute;
+    top: 15px;
+    left: 70%;
+    width: auto;
+    height: 29px;
+    color: #FFFFFF !important;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 0px;
+    opacity: 1;
+}
+.offers
+{
+    position: absolute;
+    top: 15px;
+    left: 86%;
+    width: auto;
+    height: 29px;
+    color: red !important;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 0px;
+    opacity: 1;
+}
+.third_row
+{
+    position: absolute;
+    top: 181px;
+    left: 0;
+    width: 100%;
+    height: 84px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 0.92px 1px #00000059;
+    opacity: 1;
+}
+.third_row_text
+{
+    position: absolute;
+    top: 16px;
+    left: 10%;
+    width: auto;
+    height: 29px;
+}
+.third_row_text p
+{
+    text-align: left;
+    letter-spacing: 0px;
+    color: #1D1D1B;
+    opacity: 1;
+    font-weight: 700;
+    cursor: pointer;
+}
 @media only screen and (max-width: 395px) {
     .sidebarBtn
     {
@@ -310,6 +444,54 @@ li
     {
         margin-left: 3px;
     }
+    .second_row
+    {
+        top: 208px;
+        height: 148px;
+    }
+    .men
+    {
+        top: 15px;
+        left: 10%;
+    }
+    .women
+    {
+        top: 15px;
+        left: 30%;
+    }
+    .uni
+    {
+        top: 15px;
+        left: 58%;
+    }
+    .kids
+    {
+        top: 15px;
+        left: 80%;
+    }
+    .best
+    {
+        top: 85px;
+        left: 10%;
+    }
+    .new
+    {
+        top: 85px;
+        left: 40%;
+    }
+    .offers
+    {
+        top: 85px;
+        left: 76%;
+    }
+    .third_row
+    {
+        top: 331px;
+    }
+    .third_row_text
+    {
+        width: 75%;
+    }
 }
 @media (min-width: 396px) and (max-width: 552px) {
     .sidebarBtn
@@ -362,6 +544,54 @@ li
     {
         left: 65%;
     }
+    .second_row
+    {
+        top: 208px;
+        height: 148px;
+    }
+    .men
+    {
+        top: 15px;
+        left: 10%;
+    }
+    .women
+    {
+        top: 15px;
+        left: 30%;
+    }
+    .uni
+    {
+        top: 15px;
+        left: 58%;
+    }
+    .kids
+    {
+        top: 15px;
+        left: 80%;
+    }
+    .best
+    {
+        top: 85px;
+        left: 10%;
+    }
+    .new
+    {
+        top: 85px;
+        left: 42%;
+    }
+    .offers
+    {
+        top: 85px;
+        left: 76%;
+    }
+        .third_row
+    {
+        top: 331px;
+    }
+    .third_row_text
+    {
+        width: 75%;
+    }
 }
 @media (min-width: 553px) and (max-width: 767px) {
     .sidebarBtn
@@ -413,6 +643,50 @@ li
     .user
     {
         left: 70%;
+    }
+    .second_row
+    {
+        top: 208px;
+        height: 148px;
+    }
+    .men
+    {
+        top: 15px;
+        left: 10%;
+    }
+    .women
+    {
+        top: 15px;
+        left: 30%;
+    }
+    .uni
+    {
+        top: 15px;
+        left: 58%;
+    }
+    .kids
+    {
+        top: 15px;
+        left: 80%;
+    }
+    .best
+    {
+        top: 85px;
+        left: 10%;
+    }
+    .new
+    {
+        top: 85px;
+        left: 43%;
+    }
+    .offers
+    {
+        top: 85px;
+        left: 76%;
+    }
+        .third_row
+    {
+        top: 331px;
     }
 }
 @media (min-width: 768px) and (max-width: 1268px) {

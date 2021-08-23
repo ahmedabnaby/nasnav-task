@@ -46,7 +46,7 @@ class Home extends Component {
                     open={this.state.sidebarOpen}
                     onSetOpen={this.onSetSidebarOpen}
                     styles={{ 
-                        sidebar: { position:"fixed",background: "white"}
+                        sidebar: { position:"fixed",background: "white",zIndex:'9999'}
                      }}
                 >
                     <li  onClick={() => this.onSetSidebarOpen(true)} className="sidebarBtn"><a href="#"><img src={process.env.PUBLIC_URL + 'images/sidebar.svg'} role="..."/></a></li>
@@ -115,6 +115,24 @@ class Home extends Component {
                             </li>
                         </a>
                     </ul>
+                     </Col>
+                </Row>
+                <Row className="second_row">
+                     <div className="categories">
+                        <ul>
+                            <li className="men">Men</li>
+                            <li className="women">Women</li>
+                            <li className="uni">Unisex</li>
+                            <li className="kids">Kids</li>
+                            <li className="best">Best Sellers</li>
+                            <li className="new">New Arrivals</li>
+                            <li className="offers">Offers</li>
+                        </ul>
+                     </div>
+                </Row>
+                <Row className="third_row">
+                     <Col className="third_row_text">
+                        <p>Men / Clothing / Tops / Adidas / Adidas Black T-Shirt</p>
                      </Col>
                 </Row>
             </Container>
