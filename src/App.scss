@@ -1,5 +1,12 @@
 //font montessarat
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+//colors
+$primary-color:#FFF200;
+$secondary-color:#542E90;
+html {
+    overflow-x: initial !important;
+}
 body
 {
     font-family: 'Montserrat', sans-serif;
@@ -30,23 +37,27 @@ li
 .logo
 {
     position: absolute;
-    top: 9px;
+    top: 12px;
     left: 14%;
     width: auto;
     height: 30px;
+}
+.sidebarCustom
+{
+    width:15%;
 }
 .logo-sidebar
 {
     position: absolute;
     top: 9px;
-    left: 14%;
+    left: 25%;
     width: auto;
     height: 30px;
 }
 .navText
 {
     position: relative;
-    top: 0px;
+    top: 15px;
     left: 22%;
     width: 440px;
     height: 26px;
@@ -96,8 +107,8 @@ li
     color: #000000;
     font-weight: 900;
     opacity: 1;
-    margin-left: 10px;
-    top: -2px;
+    margin-left: 25px;
+    top: -15px;
 }
 .track
 {
@@ -115,8 +126,8 @@ li
     color: #000000;
     font-weight: 900;
     opacity: 1;
-    margin-left: 10px;
-    top: -2px;
+    margin-left: 25px;
+    top: -15px;
 }
 .location
 {
@@ -134,8 +145,8 @@ li
     color: #000000;
     font-weight: 900;
     opacity: 1;
-    margin-left: 10px;
-    top: -2px;
+    margin-left: 25px;
+    top: -15px;
 }
 .first_row
 {
@@ -188,7 +199,7 @@ li
 .menu-row2
 {
     position: relative;
-    top: -20px;
+    top: -50px;
 }
 .cart
 {
@@ -206,8 +217,8 @@ li
     color: #000000;
     font-weight: 900;
     opacity: 1;
-    margin-left: 10px;
-    top: -2px;
+    margin-left: 33px;
+    top: -18px;
 }
 .heart
 {
@@ -225,8 +236,8 @@ li
     color: #000000;
     font-weight: 900;
     opacity: 1;
-    margin-left: 10px;
-    top: -2px;
+    margin-left: 33px;
+    top: -18px;
 }
 .user
 {
@@ -244,8 +255,8 @@ li
     color: #000000;
     font-weight: 900;
     opacity: 1;
-    margin-left: 10px;
-    top: -2px;
+    margin-left: 33px;
+    top: -18px;
 }
 .second_row
 {
@@ -265,7 +276,7 @@ li
 .men
 {
     position: absolute;
-    top: 15px;
+    top: 17px;
     left: 10%;
     width: auto;
     height: 29px;
@@ -278,7 +289,7 @@ li
 .women
 {
     position: absolute;
-    top: 15px;
+    top: 17px;
     left: 22%;
     width: auto;
     height: 29px;
@@ -291,7 +302,7 @@ li
 .uni
 {
     position: absolute;
-    top: 15px;
+    top: 17px;
     left: 34%;
     width: auto;
     height: 29px;
@@ -304,7 +315,7 @@ li
 .kids
 {
     position: absolute;
-    top: 15px;
+    top: 17px;
     left: 46%;
     width: auto;
     height: 29px;
@@ -317,7 +328,7 @@ li
 .best
 {
     position: absolute;
-    top: 15px;
+    top: 17px;
     left: 57%;
     width: auto;
     height: 29px;
@@ -330,7 +341,7 @@ li
 .new
 {
     position: absolute;
-    top: 15px;
+    top: 17px;
     left: 70%;
     width: auto;
     height: 29px;
@@ -343,7 +354,7 @@ li
 .offers
 {
     position: absolute;
-    top: 15px;
+    top: 17px;
     left: 86%;
     width: auto;
     height: 29px;
@@ -367,7 +378,7 @@ li
 .third_row_text
 {
     position: absolute;
-    top: 16px;
+    top: 30px;
     left: 10%;
     width: auto;
     height: 29px;
@@ -378,17 +389,240 @@ li
     letter-spacing: 0px;
     color: #1D1D1B;
     opacity: 1;
-    font-weight: 700;
+    font-weight: 900 !important;
+    font-size: 15px;
     cursor: pointer;
+}
+.main
+{
+    position: relative;
+    top: 305px;
+}
+.adidasLogoProducts
+{
+    width: 60px;
+    height: 40px;
+}
+.product-title
+{
+    text-align: left;
+    letter-spacing: 0px;
+    color: #1D1D1B;
+    opacity: 1;
+    font-size: 18px !important;
+    font-weight: 900 !important;
+    margin-top: 15px;
+}
+.product-single-details p
+{
+    font-size: 16px;
+    font-weight: bold;
+    text-align: left;
+    letter-spacing: 0px;
+    color: #A7A9AC;
+    opacity: 1;
+}
+.rating-link
+{
+    font-size: 17px !important;
+    font-weight: bolder !important;
+    text-align: left;
+    letter-spacing: 0px;
+    color: #000000 !important;
+    opacity: 1;
+    margin-left: 5px;
+}
+.product-price
+{
+    font-family: "Montserrat" !important;
+    text-align: left;
+    letter-spacing: 0px;
+    color: #542E90 !important;
+}
+.price-box span
+{
+    margin-left: 5px;
+    text-align: center;
+    letter-spacing: 0px;
+    color: #A7A9AC;
+}
+.yellowSale
+{
+    position: relative;
+    top: -20px;
+    left: 155px;
+    width: 77px;
+    height: 27px;
+    background: $primary-color 0% 0% no-repeat padding-box;
+    border-radius: 3px;
+    opacity: 1;
+}
+.yellowSale span
+{
+    position: relative;
+    top: 6px;
+    font-size: 14px;
+    left: 8px;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+}
+.product-single-filter .config-size-list li a
+{
+    background: #FFFFFF 0% 0% no-repeat padding-box !important;
+    border: 0.5px solid #D9D9D9 !important;
+    border-radius: 30px !important;
+    opacity: 1 !important;
+    margin-left: 15px;
+    font-size: 8px;
+    width: 60px;
+    height: 60px;
+    margin-bottom: 5px;
+}
+.product-single-filter .config-size-list li.active a
+{
+    background: #ECECEC 0% 0% no-repeat padding-box !important;
+    margin-bottom: 5px;
+}
+.product-title1
+{
+    position: relative;
+    top: -35px;
+    font-size: 15px;
+    font-weight: bolder;
+    text-align: left;
+    letter-spacing: 0px;
+    color: #1D1D1B;
+    opacity: 1;
+}
+.config-size-list
+{
+    position: relative;
+    top: 15px;
+    left: -50px;
+    margin-top: 5px;
+}
+.size-text
+{
+    position: relative;
+    top: 15px;
+}
+.color-image
+{
+    position: relative;
+    margin-top: 60px;
+}
+.quantity
+{
+    position: relative;
+    top: 55px;
+}
+.quantity h1
+{
+    text-align: left;
+    letter-spacing: 0px;
+    color: #1D1D1B;
+    opacity: 1;
+    font-size: 15px;
+    font-weight: bolder;
+}
+.quantity_input
+{
+    width: 252px;
+    height: 48px;
+    background: #F5F5F5 0% 0% no-repeat padding-box;
+    border: 0.5px solid #D9D9D9;
+    border-radius: 24px;
+    opacity: 1;
+}
+.input-group-field
+{
+    position: relative;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    text-align: center;
+    width: 66%;
+    padding-left: 25px;
+    top: 5px;
+    font-weight: 900;
+    color: #000;
+}
+.circle
+{
+    position: relative;
+    top: 5px;
+    left: 5px;
+    width: 37px;
+    height: 37px;
+    background: $primary-color 0% 0% no-repeat padding-box;
+    opacity: 1;
+    outline: none;
+    border-radius: 50%;
+    border: 0px transparent;
+    cursor: pointer;
+}
+.circle:focus
+{
+    outline: transparent;
+}
+.add_to_cart
+{
+    position: relative;
+    left: 10px;
+    margin-top: 15px;
+    width: 252px;
+    height: 54px;
+    background: $secondary-color 0% 0% no-repeat padding-box;
+    border-radius: 27px;
+    opacity: 1;
+}
+.add_to_cart a
+{
+    position: relative;
+    top: 15px;
+    left: 85px;
+    font-size: 16px;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+}
+.pick_up
+{
+    position: relative;
+    left: 15px;
+    margin-top: 15px;
+    width: 252px;
+    height: 54px;
+    background: $primary-color 0% 0% no-repeat padding-box;
+    border-radius: 27px;
+    opacity: 1;
+}
+.pick_up a
+{
+    position: relative;
+    top: 15px;
+    left: 55px;
+    font-size: 16px;
+    letter-spacing: 0px;
+    color: #000;
+    font-weight: bolder;
+    opacity: 1;
 }
 @media only screen and (max-width: 395px) {
     .sidebarBtn
     {
         left: 15%;
     }
+    .sidebarCustom
+    {
+        width:55%;
+    }
     .logo
     {
-        left: 35%;
+        left: 38%;
     }
     .navText
     {
@@ -401,7 +635,7 @@ li
     .searchField
     {
         padding-left: 50px;
-        width: 25%;
+        width: 40%;
     }
     .searchIcon
     {
@@ -413,12 +647,12 @@ li
     }
     .adidasIcon
     {
-        left: 55%;
+        left: 65%;
     }
     .menu-row2
     {
         position: relative;
-        top: 50px;
+        top: 45px;
     }
     .cart
     {
@@ -426,23 +660,23 @@ li
     }
     .heart
     {
-        left: 33%;
+        left: 35%;
     }
     .user
     {
-        left: 65%;
+        left: 70%;
     }
     .cart span
     {
-        margin-left: 3px;
+        margin-left: 40px;
     }
     .heart span
     {
-        margin-left: 3px;
+        margin-left: 40px;
     }
     .user span
     {
-        margin-left: 3px;
+        margin-left: 40px;
     }
     .second_row
     {
@@ -467,7 +701,7 @@ li
     .kids
     {
         top: 15px;
-        left: 80%;
+        left: 82%;
     }
     .best
     {
@@ -477,12 +711,12 @@ li
     .new
     {
         top: 85px;
-        left: 40%;
+        left: 45%;
     }
     .offers
     {
         top: 85px;
-        left: 76%;
+        left: 80%;
     }
     .third_row
     {
@@ -492,15 +726,38 @@ li
     {
         width: 75%;
     }
+    .main
+    {
+        position: relative;
+        top: 455px;
+    }
+    .product-title1
+    {
+        top: -85px;
+    }
+    .config-size-list
+    {
+        top: 15px;
+        margin-top: 15px;
+    }
+    .color-image
+    {
+        padding-top: 55px;
+        top: -55px;
+    }
 }
 @media (min-width: 396px) and (max-width: 552px) {
     .sidebarBtn
     {
         left: 15%;
     }
+    .sidebarCustom
+    {
+        width:55%;
+    }
     .logo
     {
-        left: 38%;
+        left: 41%;
     }
     .navText
     {
@@ -510,10 +767,10 @@ li
     {
         display:none;
     }
-        .searchField
+    .searchField
     {
         padding-left: 50px;
-        width: 25%;
+        width: 40%;
     }
     .searchIcon
     {
@@ -525,7 +782,7 @@ li
     }
     .adidasIcon
     {
-        left: 65%;
+        left: 70%;
     }
     .menu-row2
     {
@@ -538,11 +795,11 @@ li
     }
     .heart
     {
-        left: 35%;
+        left: 40%;
     }
     .user
     {
-        left: 65%;
+        left: 75%;
     }
     .second_row
     {
@@ -567,7 +824,7 @@ li
     .kids
     {
         top: 15px;
-        left: 80%;
+        left: 84%;
     }
     .best
     {
@@ -577,12 +834,12 @@ li
     .new
     {
         top: 85px;
-        left: 42%;
+        left: 45%;
     }
     .offers
     {
         top: 85px;
-        left: 76%;
+        left: 82%;
     }
         .third_row
     {
@@ -592,11 +849,32 @@ li
     {
         width: 75%;
     }
+    .main
+    {
+        position: relative;
+        top: 455px;
+    }
+    .product-title1
+    {
+        top: -55px;
+    }
+    .config-size-list
+    {
+        top: 15px;
+    }
+    .color-image
+    {
+        top: -15px;
+    }
 }
 @media (min-width: 553px) and (max-width: 767px) {
     .sidebarBtn
     {
         left: 10%;
+    }
+    .sidebarCustom
+    {
+        width:55%;
     }
     .logo
     {
@@ -613,7 +891,7 @@ li
     .searchField
     {
         padding-left: 50px;
-        width: 25%;
+        width: 40%;
     }
     .searchIcon
     {
@@ -625,7 +903,7 @@ li
     }
     .adidasIcon
     {
-        left: 70%;
+        left: 75%;
     }
     .menu-row2
     {
@@ -638,11 +916,11 @@ li
     }
     .heart
     {
-        left: 38%;
+        left: 45%;
     }
     .user
     {
-        left: 70%;
+        left: 78%;
     }
     .second_row
     {
@@ -667,7 +945,7 @@ li
     .kids
     {
         top: 15px;
-        left: 80%;
+        left: 85%;
     }
     .best
     {
@@ -677,16 +955,21 @@ li
     .new
     {
         top: 85px;
-        left: 43%;
+        left: 46%;
     }
     .offers
     {
         top: 85px;
-        left: 76%;
+        left: 83%;
     }
         .third_row
     {
         top: 331px;
+    }
+    .main
+    {
+        position: relative;
+        top: 455px;
     }
 }
 @media (min-width: 768px) and (max-width: 1268px) {
@@ -702,6 +985,10 @@ li
     {
         left: 45%;
     }
+    .sidebarCustom
+    {
+        width:30%;
+    }
     .cart
     {
         left: 60%;
@@ -713,5 +1000,13 @@ li
     .heart
     {
         left: 85%;
+    }
+    .product-title1
+    {
+        top: -55px;
+    }
+    .config-size-list
+    {
+        top: 15px;
     }
 }
