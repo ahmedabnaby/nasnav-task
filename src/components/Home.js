@@ -1,7 +1,7 @@
 
 import React, { Component } from 'react';
 import Sidebar from "react-sidebar";
-import { Container } from 'react-bootstrap';
+import { Container, Row,Col } from 'react-bootstrap';
 class Home extends Component {
     constructor(props) {
         super(props);
@@ -82,6 +82,41 @@ class Home extends Component {
                     </ul>
                     </ul>
                 </div>
+                <Row className="first_row">
+                     <Col>
+                     <form action="/">
+                     <div className="input-container">
+                     <img src={process.env.PUBLIC_URL + 'images/search.svg'} className="searchIcon" role="..."/>
+                        <input className="searchField" type="text" placeholder="Search" />
+                    </div>
+                     </form>
+                     </Col>
+                     <Col>
+                     <img src={process.env.PUBLIC_URL + 'images/adidas.svg'} className="adidasIcon" role="..."/>
+                     </Col>
+                     <Col>
+                     <ul className="menu-row2">
+                        <a href="#">
+                            <li className="cart">
+                            <img src={process.env.PUBLIC_URL + 'images/cart.svg'} role="..."/>
+                            <span>Cart</span>
+                            </li>
+                        </a>
+                        <a href="#">
+                            <li className="heart">
+                            <img src={process.env.PUBLIC_URL + 'images/heart.svg'} role="..."/>
+                            <span>Wishlist</span>
+                            </li>
+                        </a>
+                        <a href="#">
+                            <li className="user">
+                            <img src={process.env.PUBLIC_URL + 'images/user.svg'} role="..."/>
+                            <span>Login</span>
+                            </li>
+                        </a>
+                    </ul>
+                     </Col>
+                </Row>
             </Container>
         </div>
          );

@@ -84,7 +84,7 @@ li
 {
     position: absolute;
     top: 15px;
-    left: 62%;
+    left: 60%;
     width: auto;
     height: 25px;
 }
@@ -103,7 +103,7 @@ li
 {
     position: absolute;
     top: 15px;
-    left: 73%;
+    left: 71%;
     width: auto;
     height: 25px;
 }
@@ -122,11 +122,121 @@ li
 {
     position: absolute;
     top: 15px;
-    left: 84%;
+    left: 82%;
     width: auto;
     height: 25px;
 }
 .location span
+{
+    position: relative;
+    text-align: left;
+    letter-spacing: 0px;
+    color: #000000;
+    font-weight: 900;
+    opacity: 1;
+    margin-left: 10px;
+    top: -2px;
+}
+.first_row
+{
+    position: absolute;
+    top: 48px;
+    left: 0;
+    width: 100%;
+    height: 84px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 0.92px 3px #00000080;
+    opacity: 1;
+}
+.input-container {
+    display: flex;
+}
+.searchIcon
+{
+    position: relative;
+    top: 30px;
+    left: 11%;
+    z-index: 9999;
+}
+.searchField
+{
+    position: absolute;
+    top: 16px;
+    left: 10%;
+    width: 15%;
+    height: 48px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 0.5004362463951111px solid #D8D8D8;
+    border-radius: 24px;
+    outline: none;
+    text-align: left;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+    font-size: 12px;
+    padding-left: 55px;
+    font-weight: 900;
+}
+.adidasIcon
+{
+    position: absolute;
+    top: 16px;
+    left: 46%;
+    width: 85px;
+    height: 57px;
+}
+.menu-row2
+{
+    position: relative;
+    top: -20px;
+}
+.cart
+{
+    position: absolute;
+    top: 15px;
+    left: 65%;
+    width: auto;
+    height: 25px;
+}
+.cart span
+{
+    position: relative;
+    text-align: left;
+    letter-spacing: 0px;
+    color: #000000;
+    font-weight: 900;
+    opacity: 1;
+    margin-left: 10px;
+    top: -2px;
+}
+.heart
+{
+    position: absolute;
+    top: 15px;
+    left: 74%;
+    width: auto;
+    height: 25px;
+}
+.heart span
+{
+    position: relative;
+    text-align: left;
+    letter-spacing: 0px;
+    color: #000000;
+    font-weight: 900;
+    opacity: 1;
+    margin-left: 10px;
+    top: -2px;
+}
+.user
+{
+    position: absolute;
+    top: 15px;
+    left: 84%;
+    width: auto;
+    height: 25px;
+}
+.user span
 {
     position: relative;
     text-align: left;
@@ -154,6 +264,52 @@ li
     {
         display:none;
     }
+    .searchField
+    {
+        padding-left: 50px;
+        width: 25%;
+    }
+    .searchIcon
+    {
+        left: 13%;
+    }
+    .first_row
+    {
+        height: 160px;
+    }
+    .adidasIcon
+    {
+        left: 55%;
+    }
+    .menu-row2
+    {
+        position: relative;
+        top: 50px;
+    }
+    .cart
+    {
+        left: 10%;
+    }
+    .heart
+    {
+        left: 33%;
+    }
+    .user
+    {
+        left: 65%;
+    }
+    .cart span
+    {
+        margin-left: 3px;
+    }
+    .heart span
+    {
+        margin-left: 3px;
+    }
+    .user span
+    {
+        margin-left: 3px;
+    }
 }
 @media (min-width: 396px) and (max-width: 552px) {
     .sidebarBtn
@@ -171,6 +327,40 @@ li
     .menu
     {
         display:none;
+    }
+        .searchField
+    {
+        padding-left: 50px;
+        width: 25%;
+    }
+    .searchIcon
+    {
+        left: 13%;
+    }
+    .first_row
+    {
+        height: 160px;
+    }
+    .adidasIcon
+    {
+        left: 65%;
+    }
+    .menu-row2
+    {
+        position: relative;
+        top: 50px;
+    }
+    .cart
+    {
+        left: 10%;
+    }
+    .heart
+    {
+        left: 35%;
+    }
+    .user
+    {
+        left: 65%;
     }
 }
 @media (min-width: 553px) and (max-width: 767px) {
@@ -190,6 +380,40 @@ li
     {
         display:none;
     }
+    .searchField
+    {
+        padding-left: 50px;
+        width: 25%;
+    }
+    .searchIcon
+    {
+        left: 13%;
+    }
+    .first_row
+    {
+        height: 160px;
+    }
+    .adidasIcon
+    {
+        left: 70%;
+    }
+    .menu-row2
+    {
+        position: relative;
+        top: 50px;
+    }
+    .cart
+    {
+        left: 10%;
+    }
+    .heart
+    {
+        left: 38%;
+    }
+    .user
+    {
+        left: 70%;
+    }
 }
 @media (min-width: 768px) and (max-width: 1268px) {
     .navText
@@ -199,5 +423,21 @@ li
     .menu
     {
         display:none;
+    }
+    .adidasIcon
+    {
+        left: 45%;
+    }
+    .cart
+    {
+        left: 60%;
+    }
+    .user
+    {
+        left: 73%;
+    }
+    .heart
+    {
+        left: 85%;
     }
 }
