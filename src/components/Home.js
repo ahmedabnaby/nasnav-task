@@ -65,11 +65,11 @@ class Home extends Component {
                                 </li>
                                 <li style={{position:'relative', left:"30px", top:'125px', color:'black', fontWeight:"700", fontSize:'13px'}}>
                                 <img src={this.props.products.image1} className="cartImage" role="..."/>
-                                <span style={{ position:'absolute', top:'0',left:"100px",fontSize:'12px',width:'45%'}}>{this.props.products.name}</span>
-                                <span style={{ position:'absolute', top:'75px',left:"100px",fontSize:'10px',width:'45%'}}>Quantity: {this.state.count}</span>
-                                <span style={{ position:'absolute', top:'95px',left:"100px",fontSize:'18px',width:'45%', color:'#542E90'}}>{this.props.products.price} LE</span>
-                                <span style={{ position:'absolute', top:'95px',left:"200px",fontSize:'18px',width:'45%', color:'#542E90'}}><a href="#" onClick={() => this.removeItemFromBasket(this.props.products.id)} className="remove">Remove</a></span>
-                                <span style={{ position:'relative', top:'55px',left:'55px',fontSize:'18px',width:'45%', color:'#000', fontWeight:'900'}}>Total : {this.props.products.price*this.state.count} LE</span>
+                                <span className="cartName">{this.props.products.name}</span>
+                                <span className="cartQty">Quantity: {this.state.count}</span>
+                                <span className="cartPrice">{this.props.products.price} LE</span>
+                                <span className="cartRemove"><a href="#" onClick={() => this.removeItemFromBasket(this.props.products.id)} className="remove">Remove</a></span>
+                                <span className="cartTotal">Total : {this.props.products.price*this.state.count} LE</span>
                                 </li>
                                 <div className="cartBtns">
                                 <div className="pick_up">
@@ -88,7 +88,7 @@ class Home extends Component {
                       styles={{ 
                         sidebar: { position:"fixed",background: "white",zIndex:'9999'}
                      }}                      
-                     sidebarClassName="sidebarCustom"
+                     sidebarClassName="sidebarCustom mobile"
                       pullRight
                     >
                             <a href="#" onClick={() => this.onSetSidebarOpen(true)}>
