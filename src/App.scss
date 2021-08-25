@@ -1321,6 +1321,10 @@ a
         position: relative;
         top: 50px;
     }
+    .mobile
+    {
+        width: 60% !important;
+    }
     .cart
     {
         left: 10%;
@@ -1539,6 +1543,10 @@ a
     {
         padding-left: 50px;
         width: 40%;
+    }
+        .mobile
+    {
+        width: 60% !important;
     }
     .searchIcon
     {
@@ -1760,6 +1768,10 @@ a
     {
         left: 73%;
     }
+    .mobile
+    {
+        width: 37% !important;
+    }
     .heart
     {
         left: 85%;
@@ -1813,6 +1825,10 @@ a
     {
         left: 47%;
     }
+    .mobile
+    {
+        width: 25% !important;
+    }
 }
 @media (min-width: 1366px) and (max-width: 1439px) {
     .footer-text
@@ -1821,6 +1837,10 @@ a
         top: 55px;
         width: 33%;
         font-size: 12px;
+    }
+    .mobile
+    {
+        width: 25% !important;
     }
 }
 @media (min-width: 1440px) and (max-width: 1679px) {
@@ -1834,6 +1854,10 @@ a
     .footer_right
     {
         left: 47%;
+    }
+    .mobile
+    {
+        width: 20% !important;
     }
 }
 @media (min-width: 1680px) and (max-width: 1919px) {
