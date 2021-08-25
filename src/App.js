@@ -22,7 +22,7 @@ class App extends Component {
       id:'1',
       name: "Adidas black t-shirt lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
       category: "Men",
-      price: "9,999 LE",
+      price: "9999",
       image1: adidas,
       image1x2: adidas1,
       image2: adidas2,

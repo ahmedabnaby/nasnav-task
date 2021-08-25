@@ -3,22 +3,29 @@ import React, { Component } from 'react';
 import Sidebar from "react-sidebar";
 import ImageComponent from "./ImageComponent";
 import Navbar from "./Navbar";
-
+import { Redirect } from "react-router-dom";
 
 import similar1x2 from "../images/similar1x2.png"
 import similar2x2 from "../images/similar2x2.png"
 import similar3x2 from "../images/similar3x2.png"
 import similar4x2 from "../images/similar4x2.png"
 
-import Product from "./Product";
 import SimilarProducts from "./SimilarProducts";
 import { Container, Row,Col } from 'react-bootstrap';
 class Home extends Component {
     constructor(props) {
         super(props);
         this.state = {
-          count: 0
+          count: 0,
+          sidebarOpen: false,
         };
+        this.onSetSidebarOpen = this.onSetSidebarOpen.bind(this);
+  }
+  onSetSidebarOpen(open) {
+    this.setState({ sidebarOpen: open });
+  }
+  removeItemFromBasket(itemId) {
+    this.setState({count: 0});
   }
   render() { 
       let count = this.state.count;
@@ -45,9 +52,47 @@ class Home extends Component {
                      <img src={process.env.PUBLIC_URL + 'images/adidas.svg'} className="adidasIcon" role="..."/>
                      </div>
                      <div>
-                     <ul className="menu-row2">
-                        <a href="#">
-                        <div className="counter">
+                     <Sidebar
+                      sidebar={            
+                      <ul>
+                       <li className="right-sidebar-heading" style={{marginTop:'15px'}}><h1>My Cart</h1></li>
+                       {this.state.count === 0 ? 
+                       <li className="right-sidebar-heading" style={{marginTop:'15px'}}><h1>Your Cart Is Empty.</h1></li>
+                       :
+                       <div>
+                                <li style={{position:'relative', left:"30px", top:'100px', color:'black', fontWeight:"900", fontSize:'13px'}}>
+                                <span style={{position:'relative', top:'-15px'}}>Cart Summary</span>
+                                </li>
+                                <li style={{position:'relative', left:"30px", top:'125px', color:'black', fontWeight:"700", fontSize:'13px'}}>
+                                <img src={this.props.products.image1} className="cartImage" role="..."/>
+                                <span style={{ position:'absolute', top:'0',left:"100px",fontSize:'12px',width:'45%'}}>{this.props.products.name}</span>
+                                <span style={{ position:'absolute', top:'75px',left:"100px",fontSize:'10px',width:'45%'}}>Quantity: {this.state.count}</span>
+                                <span style={{ position:'absolute', top:'95px',left:"100px",fontSize:'18px',width:'45%', color:'#542E90'}}>{this.props.products.price} LE</span>
+                                <span style={{ position:'absolute', top:'95px',left:"200px",fontSize:'18px',width:'45%', color:'#542E90'}}><a href="#" onClick={() => this.removeItemFromBasket(this.props.products.id)} className="remove">Remove</a></span>
+                                <span style={{ position:'relative', top:'55px',left:'55px',fontSize:'18px',width:'45%', color:'#000', fontWeight:'900'}}>Total : {this.props.products.price*this.state.count} LE</span>
+                                </li>
+                                <div className="cartBtns">
+                                <div className="pick_up">
+                                    <a href="#">Review Cart</a>
+                                </div>
+                                <div className="add_to_cart">
+                                    <a href="#">Complete Checkout</a>
+                                </div>
+                                </div>
+                            </div>
+                      }
+
+                        </ul>}
+                      open={this.state.sidebarOpen}
+                      onSetOpen={this.onSetSidebarOpen}
+                      styles={{ 
+                        sidebar: { position:"fixed",background: "white",zIndex:'9999'}
+                     }}                      
+                     sidebarClassName="sidebarCustom"
+                      pullRight
+                    >
+                            <a href="#" onClick={() => this.onSetSidebarOpen(true)}>
+                              <div className="counter">
                                 <span>{count}</span>
                               </div>
                             <li className="cart">
@@ -55,6 +100,17 @@ class Home extends Component {
                             <span>Cart</span>
                             </li>
                         </a>
+                    </Sidebar> 
+                     <ul className="menu-row2">
+                        {/* <a href="#">
+                              <div className="counter">
+                                <span>{count}</span>
+                              </div>
+                            <li className="cart">
+                            <img src={process.env.PUBLIC_URL + 'images/cart.svg'} role="..."/>
+                            <span>Cart</span>
+                            </li>
+                        </a> */}
                         <a href="#">
                             <li className="heart">
                             <img src={process.env.PUBLIC_URL + 'images/heart.svg'} role="..."/>
@@ -85,7 +141,7 @@ class Home extends Component {
                 </div>
                 <div className="third_row">
                      <div className="third_row_text">
-                        <p>Men / Clothing / Tops / Adidas / Adidas Black T-Shirt</p>
+                        <p>Men /Clothings/ Tops / Adidas / Adidas Black T-Shirt</p>
                      </div>
                 </div>
 
@@ -94,7 +150,7 @@ class Home extends Component {
     <div className="container">
 
       {/* End .product-single-container */}
-      <div className="product-single-container product-single-default">
+      <div className="product-single-container">
       <div className="row">
         <div className="col-md-5 product-single-gallery">
           <div className="product-slider-container">
@@ -162,7 +218,7 @@ class Home extends Component {
           {/* End .ratings-container */}
           <hr className="short-divider" />
           <div className="price-box">
-            <span className="product-price">{this.props.products.price}</span>
+            <span className="product-price">{this.props.products.price}  LE</span>
             <span>9,999 LE</span>
             <div className="yellowSale">
             <span>30% Off</span>
@@ -213,7 +269,7 @@ class Home extends Component {
               <button type="button"  onClick={() => this.setState({ count: this.state.count - 1 })} className="button hollow circle" data-quantity="minus" data-field="quantity">
                   <i className="fa fa-minus" aria-hidden="true"></i>
               </button>
-              <input className="input-group-field" type="number" name="quantity" defaultValue="1"/>
+              <input className="input-group-field" type="number" name="quantity" defaultValue={this.state.count}/>
               <button type="button"  onClick={() => this.setState({ count: this.state.count + 1 })} className="button hollow circle" data-quantity="plus" data-field="quantity">
               <i className="fa fa-plus" aria-hidden="true"></i>
               </button>

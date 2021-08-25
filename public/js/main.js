@@ -671,7 +671,7 @@
 								var $this = $(this),
 									zoomConfig = {
 										responsive: true,
-										zoomWindowFadeIn: 350,
+										zoomWindowFadeIn: 550,
 										zoomWindowFadeOut: 200,
 										borderSize: 0,
 										zoomContainer: $this.parent(),
